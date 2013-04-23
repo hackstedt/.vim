@@ -27,9 +27,12 @@ runtime! debian.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 inoremap jj <Esc>       " Quickly get out of insert mode 
-map ww <Esc>:w<CR> " Quickly get out of insert mode and write file
+imap ww <Esc>:w<CR>     " Quickly get out of insert mode and write file
 let mapleader = ","     " Choose a nicer leader-key
-nnoremap ö :            " Use "ö"-key like ":""
+" Use "ö"-key like ":"
+nnoremap ö :
+" Use "ä"-key like "/"
+nnoremap ä /
 
 " Easy window navigation
 map <C-h> <C-w>h
