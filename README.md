@@ -10,13 +10,13 @@ Backup (or delete, if you haven't made any changes so far) your current .vimrc a
 
 * Backup:
 
-        mv .vimrc .vimrc.bak
-        mv .vim/ .vim.bak/
+        mv ~/.vimrc ~/.vimrc.bak
+        mv ~/.vim/ ~/.vim.bak/
 
 * Delete:
 
-        rm .vimrc
-        rm -rf .vim/
+        rm ~/.vimrc
+        rm -rf ~/.vim/
 
 
 Then, clone the repo using
@@ -25,7 +25,7 @@ Then, clone the repo using
 
 Finally (and this might be an inconvenient solution, but we're open for suggestions), hardlink the repos' .vimrc to the $HOME/.vimrc:
 
-        ln .vim/.vimrc .vimrc
+        ln ~/.vim/.vimrc ~/.vimrc
 
 This repo uses vundle, a bundle management system for vim which is hosted on github, too. Clone it:
 
