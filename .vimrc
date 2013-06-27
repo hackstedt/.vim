@@ -39,9 +39,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
- 
-" use w!! to save a file with root-rights
-cmap w!! w !sudo tee % >/dev/null
 
 
 
