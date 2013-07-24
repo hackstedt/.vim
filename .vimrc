@@ -1,8 +1,20 @@
+""""""""""""""""""""""""""""
+"  Sections:               "
+"                          "
+"   * Shortcuts            "
+"   * Editing behaviour    "
+"   * Editor layout        "
+"   * Vim behaviour        "
+"   * NERDTree stuff       "
+"   * Vundle stuff         "
+"                          "
+""""""""""""""""""""""""""""
 
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Shortcuts                                    "
+"                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 inoremap jj <Esc>       " Quickly get out of insert mode 
@@ -23,6 +35,7 @@ map <C-l> <C-w>l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Editing behaviour                              "
+"                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 runtime! debian.vim             " This line should not be removed as it ensures that various options are
@@ -60,7 +73,9 @@ set pastetoggle=<F2>            " When in insert mode, press <F2> to go to paste
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Editor layout                                  "
+"                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set t_Co=256                  " Use 256 colors in terminal
 colorscheme grb256            " Use the given colorscheme/theme
 syntax on                     " Syntax highlighting
@@ -76,6 +91,7 @@ set ruler                     " Show ruler
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Vim behaviour                                  " 
+"                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set hidden                      " Hide buffers instead of closing them this means that the current buffer can be put
@@ -106,6 +122,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               NERDTree stuff                                 "
+"                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd vimenter * NERDTree " Open a NERDTree automatically when vim starts up
@@ -131,6 +148,7 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Vundle stuff                                  "
+"                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype off " Must be declared before Vundle stuff
