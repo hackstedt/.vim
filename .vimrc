@@ -1,24 +1,3 @@
-" All system-wide defaults are set in $VIMRUNTIME/debian.vim (usually just
-" /usr/share/vim/vimcurrent/debian.vim) and sourced by the call to :runtime
-" you can find below. If you wish to change any of those settings, you should
-" do it in this file (/etc/vim/vimrc), since debian.vim will be overwritten
-" everytime an upgrade of the vim packages is performed.  It is recommended to
-" make changes after sourcing debian.vim since it alters the value of the
-" 'compatible' option.
-
-" Source a global configuration file if available
-"if filereadable("/etc/vim/vimrc.local")
-"  source /etc/vim/vimrc.local
-"endif
-
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
-
-" Uncomment the next line to make Vim more Vi-compatible
-" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
-" options, so any other options should be set AFTER setting 'compatible'.
-"set compatible
 
 
 
@@ -46,6 +25,9 @@ map <C-l> <C-w>l
 "                               Editing behaviour                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+runtime! debian.vim             " This line should not be removed as it ensures that various options are
+                                " properly set to work with the Vim-related packages available in Debian.
+                                " (It's $VIMRUNTIME/debian.vim; usually just /usr/share/vim/vimcurrent/debian.vim)
 set showmatch                   " Show matching brackets.
 set ignorecase                  " Do case insensitive matching
 set smartcase                   " Do smart case matching
