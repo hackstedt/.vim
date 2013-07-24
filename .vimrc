@@ -32,12 +32,9 @@ set showmatch                   " Show matching brackets.
 set ignorecase                  " Do case insensitive matching
 set smartcase                   " Do smart case matching
 set incsearch                   " Incremental search
-"set autowrite                  " Automatically save before commands like :next and :make
-"set hidden                     " Hide buffers when they are abandoned
 set mouse=a                     " Enable mouse usage (all modes)
 set smartindent                 "	Do smart autoindenting when starting a new line.
 set showmode                    " always show what mode we're currently editing in
-" set nowrap                    " don't wrap lines
 set tabstop=2                   " a tab is four spaces
 set softtabstop=2               " when hitting <BS>, pretend like a tab is removed, even if spaces
 set expandtab                   " expand tabs by default (overloadable per file type later)
@@ -49,12 +46,15 @@ set copyindent                  " copy the previous indentation on autoindenting
 set number                      " always show line numbers
 set smarttab                    " insert tabs on the start of a line according to shiftwidth, not tabstop
 set scrolloff=4                 " keep 4 lines off the edges of the screen when scrolling
-" set virtualedit=all           " allow the cursor to go in to "invalid" places
 set hlsearch                    " highlight search terms
 set gdefault                    " search/replace "globally" (on a line) by default
-" set listchars=tab:▸\ ,trail:·,extends:#,nbsp:· " make the invisible chars visible
 set nolist                      " don't show invisible characters by default, but it can be enabled for some file types 
 set pastetoggle=<F2>            " when in insert mode, press <F2> to go to paste mode, where you can paste mass data that won't be autoindented
+" set autowrite                 " Automatically save before commands like :next and :make
+" set hidden                    " Hide buffers when they are abandoned
+" set virtualedit=all           " Allow the cursor to go in to 'invalid' places
+" set nowrap                    " Don't wrap lines
+" set listchars=tab:▸\ ,trail:·,extends:#,nbsp:· " Make the invisible chars visible
 
 
 
