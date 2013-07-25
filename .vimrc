@@ -40,6 +40,9 @@ inoremap <F7> <Esc>:m .+1<CR>==gi
 nnoremap <F7> :m .+1<CR>==
 vnoremap <F7> :m '>+1<CR>gv=gv
 
+" Shortcut to toggle Undotree on/off
+nnoremap <F5> :UndotreeToggle<cr>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               Editing behaviour                              "
@@ -149,8 +152,6 @@ endif
 map <F4> :NERDTreeToggle<CR>
 inoremap <F4> <Esc>:NERDTreeToggle<CR>a
 
-" Shortcut to toggle Undotree on/off
-nnoremap <F5> :UndotreeToggle<cr>
 
 
 
