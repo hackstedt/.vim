@@ -150,8 +150,7 @@ endif
 
 " Shortcut to toggle NERDTree on/off
 map <F4> :NERDTreeToggle<CR>
-inoremap <F4> <Esc>:NERDTreeToggle<CR>a
-
+inoremap <F4> <Esc>:NERDTreeToggle<CR>
 
 
 
