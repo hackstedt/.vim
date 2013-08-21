@@ -126,6 +126,10 @@ set nomodeline                  " Disable mode lines (security measure)
 " set cursorline                " Underline the current line, for quick orientation
 " Open a file at the last edited location:
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+augroup myvimrc " Autoload/resource the *vimrc - file after saving it
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
 
 
 
