@@ -28,23 +28,19 @@ nnoremap ö :
 " Use "ä"-key like "/"
 nnoremap ä /
 
-" Easy window navigation
-map <C-h> <C-w>h
+map <C-h> <C-w>h        " Easy window navigation
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Move lines of text or a whole block up or down
-" TODO Better mapping
-nnoremap <F8> :m .-2<CR>==
-inoremap <F8> <Esc>:m .-2<CR>==gi
+nnoremap <F8> :m .-2<CR>==          " Move lines of text or a whole block up or down
+inoremap <F8> <Esc>:m .-2<CR>==gi   " TODO Better mapping
 vnoremap <F8> :m '<-2<CR>gv=gv
 inoremap <F7> <Esc>:m .+1<CR>==gi
 nnoremap <F7> :m .+1<CR>==
 vnoremap <F7> :m '>+1<CR>gv=gv
 
-" Shortcut to toggle Undotree on/off
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <F5> :UndotreeToggle<cr>    " Shortcut to toggle Undotree on/off
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
