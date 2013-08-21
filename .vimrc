@@ -17,7 +17,6 @@
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-inoremap jj <Esc>       " Quickly get out of insert mode 
 " TODO If you get out of insert mode, the coursor jumps 6 chars to the right.
 " - Prevent this.
 inoremap ff <Esc>       " Quickly get out of insert mode
