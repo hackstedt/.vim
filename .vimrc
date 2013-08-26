@@ -45,6 +45,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+let i = 1               " More easy window navigation
+while i <= 9
+  execute 'nnoremap <Leader>' . i . ' :' . i . 'wincmd w<CR>'
+  let i = i + 1
+endwhile
+
 nnoremap <F8> :m .-2<CR>==          " Move lines of text or a whole block up or down
 inoremap <F8> <Esc>:m .-2<CR>==gi   " TODO Better mapping
 vnoremap <F8> :m '<-2<CR>gv=gv
@@ -121,6 +127,7 @@ set lazyredraw                " Don't update the display while executing macros
 set laststatus=2              " Always put a status line in, even if there is only one window
 set cmdheight=2               " Use a status bar that is 2 rows high
 set ruler                     " Show ruler
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ \(%{tabpagewinnr(tabpagenr())}\)
 
 
 
