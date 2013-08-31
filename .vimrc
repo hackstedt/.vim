@@ -34,6 +34,7 @@
 " - Prevent this.
 inoremap ff <Esc>       " Quickly get out of insert mode
 imap ww <Esc>:w<CR>     " Quickly get out of insert mode and write file
+nnoremap ^ <ESC>:w<CR>  " Quickly write file in normal mode
 let mapleader = ','     " Choose a nicer leader-key
 " Use "ö"-key like ":"
 nnoremap ö :
@@ -44,6 +45,11 @@ map <C-h> <C-w>h        " Easy window navigation
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+nnoremap ,m4 <C-w>>     " Resize window
+nnoremap ,m6 <C-w><
+nnoremap ,m8 <C-w>-
+nnoremap ,m2 <C-w>+
 
 let i = 1               " More easy window navigation
 while i <= 9
