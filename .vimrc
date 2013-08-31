@@ -195,6 +195,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " let NERDTreeCaseSensitiveSort=1
 let NERDTreeAutoDeleteBuffer=1
+let NERDTreeShowBookmarks=1
 
 " If you fire up vim without open a file => focus on NERDTree, becouse its already running by now
 if bufnr("[No Name]") != -1
@@ -247,8 +248,8 @@ let g:signify_mapping_next_hunk = '<leader>gj'
 let g:signify_mapping_prev_hunk = '<leader>gk'
 let g:signify_mapping_toggle_highlight = '<leader>gh'
 let g:signify_update_on_bufenter = 1
-let g:signify_cursorhold_normal = 1
-let g:signify_cursorhold_insert = 1
+let g:signify_cursorhold_normal = 0
+let g:signify_cursorhold_insert = 0
 
 " Visually displaying indent levels in Vim.
 " The default mapping to toggle the plugin is <Leader>ig
