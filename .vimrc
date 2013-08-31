@@ -124,9 +124,9 @@ set pastetoggle=<F2>            " When in insert mode, press <F2> to go to paste
 
 
 set t_Co=256                  " Use 256 colors in terminal
-colorscheme grb256            " Use the given colorscheme/theme
-syntax on                     " Syntax highlighting
+syntax enable                 " Syntax highlighting
 set background=dark           " If using a dark background within the editing area and syntax highlighting turn on this option as well
+"colorscheme grb256            " Use the given colorscheme/theme
 set termencoding=utf-8        " Encoding used for the terminal.
 set encoding=utf-8            " Sets the character encoding used inside Vim.
 set lazyredraw                " Don't update the display while executing macros
@@ -171,10 +171,10 @@ set nomodeline                  " Disable mode lines (security measure)
 " set cursorline                " Underline the current line, for quick orientation
 " Open a file at the last edited location:
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-augroup myvimrc " Autoload/resource the *vimrc - file after saving it
-  au!
-  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-augroup END
+"augroup myvimrc " Autoload/resource the *vimrc - file after saving it
+  "au!
+  "au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+"augroup END
 
 
 
@@ -258,6 +258,12 @@ Bundle 'nathanaelkane/vim-indent-guides'
 " Provides syntax and indent plugins.
 Bundle 'pangloss/vim-javascript'
 
+" Vim Syntax File for SCSS (Sassy CSS)
+Bundle 'cakebaker/scss-syntax.vim'
+
+" Highlight colors in css files
+Bundle "ap/vim-css-color"
+
 " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
 
@@ -283,9 +289,6 @@ Bundle 'tpope/vim-fugitive'
 
 " Ruby on Rails power tools
 Bundle 'tpope/vim-rails'
-
-" A dark vim color scheme for 256-color terminals.
-Bundle 'Lokaltog/vim-distinguished'
 
 " Exploring the source code based on "tags", and it works like the context window of "Source Insight". 
 " Open the Source Explorer window with :SrcExpl or :SrcExplToggle or map these commands to keys in your .vimrc.
@@ -345,6 +348,26 @@ Bundle 'scrooloose/nerdcommenter'
 " Bundle 'skalnik/vim-vroom'
 
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+
+
+"                                vim-color theme                               "
+" ---------------------------------------------------------------------------- "
+" It feels really nice especially for Ruby on Rails development
+" rgb256
+
+" If you write Ruby code most of the time, you should definitely try it.
+" Railscast
+
+" Guardian is originally created for XHTML and CSS editing, however you can
+" use it for Ruby and JavaScript development as well.
+Bundle 'Suave/vim-colors-guardian'
+
+" It’s perfect for JavaScript development.
+Bundle 'Lokaltog/vim-distinguished'
+
+colorscheme distinguished
+
 
 
 "                               vim-scripts repos                              "
