@@ -153,8 +153,6 @@ set hidden                      " Hide buffers instead of closing them this mean
 set switchbuf=useopen           " Reveal already opened files from the quickfix window instead of opening new buffers
 set history=1000                " Remember more commands and search history
 set undolevels=1000             " Use many muchos levels of undo
-set undofile                    " Keep a persistent backup file
-set undodir=~/.vim/.undo,~/tmp,/tmp
 set nobackup                    " Do not keep backup files, it's 70's style cluttering
 set noswapfile                  " Do not write annoying intermediate swap files, who did ever restore from swap files anyway?
 set directory=~/.vim/.tmp,~/tmp,/tmp " Store swap files in one of these directories (in case swapfile is ever turned on)
@@ -167,6 +165,10 @@ set visualbell                  " Don't beep
 set noerrorbells                " Don't beep
 set showcmd                     " Show (partial) command in the last line of the screen this also shows visual selection info
 set nomodeline                  " Disable mode lines (security measure)
+if exists('+undofile')          " Keep a persistent backup file
+  set undofile
+  set undodir=~/.vim/.undo,~/tmp,/tmp
+end
 " set ttyfast                   " Always use a fast terminal
 " set cursorline                " Underline the current line, for quick orientation
 " Open a file at the last edited location:
