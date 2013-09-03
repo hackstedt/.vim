@@ -368,7 +368,14 @@ Bundle 'Suave/vim-colors-guardian'
 " It’s perfect for JavaScript development.
 Bundle 'Lokaltog/vim-distinguished'
 
-colorscheme distinguished
+let g:solarized_termcolors=256
+
+"colorscheme guardian
+"colorscheme solarized
+"colorscheme distinguished
+
+autocmd BufEnter * set t_Co=256 | syntax enable | set background=dark | colorscheme solarized
+autocmd BufEnter *.css,*.coffee colorscheme distinguished
 
 
 
