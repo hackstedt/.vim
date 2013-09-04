@@ -23,9 +23,9 @@ Then, clone the repo using
 
         git clone git://github.com/hackstedt/.vim.git ~/.vim
 
-Finally (and this might be an inconvenient solution, but we're open for suggestions), hardlink the repos' .vimrc to the $HOME/.vimrc:
+Finally (and this might be an inconvenient solution, but we're open for suggestions), softlink the repos' .vimrc to the $HOME/.vimrc:
 
-        ln ~/.vim/.vimrc ~/.vimrc
+        ln -s ~/.vim/.vimrc ~/.vimrc
 
 This repo uses vundle, a bundle management system for vim which is hosted on github, too. Clone it:
 
