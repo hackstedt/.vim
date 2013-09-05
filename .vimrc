@@ -8,6 +8,7 @@
 "       | |\_.  |                   * Shortcuts                                |
 "       |\|  | /|                   * Editing behaviour                        |
 "       | `---' |                   * Editor layout                            |
+"       |       |                     + Colors and Colorschemes                |
 "       |       |                   * Vim behaviour                            |
 "       |       |                   * NERDTree stuff                           |
 "       |       |                   * Vundle stuff                             |
@@ -123,17 +124,39 @@ set pastetoggle=<F2>            " When in insert mode, press <F2> to go to paste
        "-----------------------------------------------------------------------:
 
 
-set t_Co=256                  " Use 256 colors in terminal
-syntax enable                 " Syntax highlighting
-set background=dark           " If using a dark background within the editing area and syntax highlighting turn on this option as well
-"colorscheme grb256            " Use the given colorscheme/theme
-set termencoding=utf-8        " Encoding used for the terminal.
-set encoding=utf-8            " Sets the character encoding used inside Vim.
-set lazyredraw                " Don't update the display while executing macros
-set laststatus=2              " Always put a status line in, even if there is only one window
-set cmdheight=2               " Use a status bar that is 2 rows high
-set ruler                     " Show ruler
+set termencoding=utf-8          " Encoding used for the terminal.
+set encoding=utf-8              " Sets the character encoding used inside Vim.
+set lazyredraw                  " Don't update the display while executing macros
+set laststatus=2                " Always put a status line in, even if there is only one window
+set cmdheight=2                 " Use a status bar that is 2 rows high
+set ruler                       " Show ruler
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ \(%{tabpagewinnr(tabpagenr())}\)
+
+
+"                            Colors and Colorschemes                           "
+" ---------------------------------------------------------------------------- "
+
+set t_Co=256                    " Use 256 colors in terminal
+syntax enable                   " Syntax highlighting
+set background=dark             " If using a dark background within the editing area and syntax highlighting turn on this option as well
+
+let g:solarized_termcolors=256  " Tell solarized to use 256 colors in Terminal
+
+" Use individual colorscheme depending on given fyletype:
+let g:colors_name = "nil"
+let last_colorscheme = g:colors_name
+au BufLeave * let last_colorscheme = g:colors_name
+augroup filetype_colorscheme
+" REFACT: Make a list/array containing the following filetypes:
+  au BufEnter * if &ft == "sass" || &ft == "scss.css" || &ft == "scss" || &ft == "css"
+\ |     if last_colorscheme != "distinguished"
+\ |       colorscheme distinguished
+\ |     endif
+\ |   elseif last_colorscheme != "solarized" && &ft != "nerdtree"
+\ |     syntax enable | set background=dark | colorscheme solarized
+\ |   endif
+\ |   ColorHighlight!
+augroup END
 
 
 
@@ -354,7 +377,6 @@ Bundle 'scrooloose/nerdcommenter'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 
-
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
 
@@ -372,16 +394,6 @@ Bundle 'Suave/vim-colors-guardian'
 
 " It’s perfect for JavaScript development.
 Bundle 'Lokaltog/vim-distinguished'
-
-let g:solarized_termcolors=256
-
-"colorscheme guardian
-"colorscheme solarized
-"colorscheme distinguished
-
-autocmd BufEnter * set t_Co=256 | syntax enable | set background=dark | colorscheme solarized
-autocmd BufEnter *.css,*.coffee colorscheme distinguished
-
 
 
 "                               vim-scripts repos                              "
