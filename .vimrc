@@ -355,14 +355,17 @@ Bundle 'scrooloose/nerdcommenter'
 
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
+
 " It feels really nice especially for Ruby on Rails development
-" rgb256
+" rgb256 <=> Included in this repo.
 
-" If you write Ruby code most of the time, you should definitely try it.
-" Railscast
+" Precision colorscheme for the vim text editor
+Bundle 'altercation/vim-colors-solarized'
 
-" Guardian is originally created for XHTML and CSS editing, however you can
-" use it for Ruby and JavaScript development as well.
+" A port of the Railscasts Textmate theme to Vim
+Bundle 'jpo/vim-railscasts-theme'
+
+" Guardian is originally created for XHTML and CSS editing, however you can use it for Ruby and JavaScript development as well.
 Bundle 'Suave/vim-colors-guardian'
 
 " It’s perfect for JavaScript development.
