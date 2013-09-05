@@ -263,8 +263,10 @@ Bundle 'pangloss/vim-javascript'
 " Vim Syntax File for SCSS (Sassy CSS)
 Bundle 'cakebaker/scss-syntax.vim'
 
-" Highlight colors in css files
-Bundle "ap/vim-css-color"
+" color hex codes and color names
+Bundle 'chrisbra/color_highlight'
+"let g:colorizer_auto_filetype='css,scss,scss.css,sass,html'
+let g:colorizer_auto_color = 1
 
 " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
