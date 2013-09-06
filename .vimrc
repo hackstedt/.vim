@@ -155,9 +155,15 @@ augroup filetype_colorscheme
 \ |   elseif last_colorscheme != "solarized" && &ft != "nerdtree"
 \ |     syntax enable | set background=dark | colorscheme solarized
 \ |   endif
+<<<<<<< HEAD
 augroup END
 
 "\ |   ColorHighlight!
+=======
+\ |   ColorHighlight!
+augroup END
+
+>>>>>>> 7918af469bef33243a534d2ff4b22bcfc8c55b23
 
 
        "-----------------------------------------------------------------------:
@@ -287,9 +293,15 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 
 " color hex codes and color names
+<<<<<<< HEAD
 "Bundle 'chrisbra/color_highlight'
 "let g:colorizer_auto_filetype='css,scss,scss.css,sass,html'
 "let g:colorizer_auto_color = 0
+=======
+Bundle 'chrisbra/color_highlight'
+"let g:colorizer_auto_filetype='css,scss,scss.css,sass,html'
+let g:colorizer_auto_color = 1
+>>>>>>> 7918af469bef33243a534d2ff4b22bcfc8c55b23
 
 " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
@@ -395,8 +407,11 @@ Bundle 'Suave/vim-colors-guardian'
 " It’s perfect for JavaScript development.
 Bundle 'Lokaltog/vim-distinguished'
 
+<<<<<<< HEAD
 " 256 colors version of github vim colorscheme
 Bundle 'joedicastro/vim-github256'
+=======
+>>>>>>> 7918af469bef33243a534d2ff4b22bcfc8c55b23
 
 "                               vim-scripts repos                              "
 " ---------------------------------------------------------------------------- "
