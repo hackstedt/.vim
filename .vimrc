@@ -155,9 +155,9 @@ augroup filetype_colorscheme
 \ |   elseif last_colorscheme != "solarized" && &ft != "nerdtree"
 \ |     syntax enable | set background=dark | colorscheme solarized
 \ |   endif
-\ |   ColorHighlight!
 augroup END
 
+"\ |   ColorHighlight!
 
 
        "-----------------------------------------------------------------------:
@@ -287,9 +287,9 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 
 " color hex codes and color names
-Bundle 'chrisbra/color_highlight'
+"Bundle 'chrisbra/color_highlight'
 "let g:colorizer_auto_filetype='css,scss,scss.css,sass,html'
-let g:colorizer_auto_color = 1
+"let g:colorizer_auto_color = 0
 
 " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 Bundle 'Raimondi/delimitMate'
