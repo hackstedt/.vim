@@ -434,6 +434,9 @@ Bundle 'voogle'
 " <cr>   This will change the log window to the branch selected. It does not change the current branch of the given repository.
 Bundle 'git-log'
 
+" Manage Most Recently Used (MRU) files.
+Bundle 'mru.vim'
+let MRU_File = "/home/sven/.vim/.vim_mru_files"
 
 "                               Non github repo                                "
 " ---------------------------------------------------------------------------- "
