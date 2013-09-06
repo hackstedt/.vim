@@ -395,6 +395,8 @@ Bundle 'Suave/vim-colors-guardian'
 " It’s perfect for JavaScript development.
 Bundle 'Lokaltog/vim-distinguished'
 
+" 256 colors version of github vim colorscheme
+Bundle 'joedicastro/vim-github256'
 
 "                               vim-scripts repos                              "
 " ---------------------------------------------------------------------------- "
