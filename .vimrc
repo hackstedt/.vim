@@ -42,6 +42,9 @@ nnoremap ö :
 " Use "ä"-key like "/"
 nnoremap ä /
 
+" Yank from the cursor to the end of the line, to be consistent with C and D.
+nnoremap Y y$
+
 map <C-h> <C-w>h        " Easy window navigation
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -65,7 +68,7 @@ inoremap <F7> <Esc>:m .+1<CR>==gi
 nnoremap <F7> :m .+1<CR>==
 vnoremap <F7> :m '>+1<CR>gv=gv
 
-nnoremap <F5> :UndotreeToggle<cr>    " Shortcut to toggle Undotree on/off
+nnoremap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
 
 
 
@@ -124,14 +127,21 @@ set pastetoggle=<F2>            " When in insert mode, press <F2> to go to paste
        "-----------------------------------------------------------------------:
 
 
-set termencoding=utf-8          " Encoding used for the terminal.
-set encoding=utf-8              " Sets the character encoding used inside Vim.
-set lazyredraw                  " Don't update the display while executing macros
-set laststatus=2                " Always put a status line in, even if there is only one window
-set cmdheight=2                 " Use a status bar that is 2 rows high
-set ruler                       " Show ruler
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ \(%{tabpagewinnr(tabpagenr())}\)
-
+set termencoding=utf-8  " Encoding used for the terminal.
+set encoding=utf-8      " Sets the character encoding used inside Vim.
+set lazyredraw          " Don't update the display while executing macros
+set laststatus=2        " Always put a status line in, even if there is only one window
+set cmdheight=2         " Use a status bar that is 2 rows high
+" Statusline stuff:
+set statusline=%t\                                  " Filename
+set statusline+=%{expand('%:p:h')}\                 " Path to file
+set statusline+=%w%h%m%r                            " Options
+set statusline+=%{fugitive#statusline()}            " Git Hotness
+set statusline+=%=                                  " Right aligned:
+" Filetype and encoding info:
+set statusline+=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)
+set statusline+=\ %l,%c/%L                            " Lines and cols
+set statusline+=\ \(%{tabpagewinnr(tabpagenr())}\)  " Window number
 
 "                            Colors and Colorschemes                           "
 " ---------------------------------------------------------------------------- "
@@ -139,6 +149,7 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ \(%{tabpagewinnr(tabpagenr())}
 set t_Co=256                    " Use 256 colors in terminal
 syntax enable                   " Syntax highlighting
 set background=light            " light or dark depending on the colorscheme
+
 
 " Use individual colorscheme depending on given fyletype:
 let g:colors_name = "nil"
@@ -319,7 +330,7 @@ Bundle 'tpope/vim-fugitive'
 " Ruby on Rails power tools
 Bundle 'tpope/vim-rails'
 
-" Exploring the source code based on "tags", and it works like the context window of "Source Insight". 
+" Exploring the source code based on "tags", and it works like the context window of "Source Insight".
 " Open the Source Explorer window with :SrcExpl or :SrcExplToggle or map these commands to keys in your .vimrc.
 Bundle 'wesleyche/SrcExpl'
 
@@ -375,6 +386,13 @@ let g:pymode_folding = 0
 let g:pymode_lint_hold = 0
 
 
+" Powerline-fonts for the use with vim-airline
+"Bundle 'Lokaltog/powerline-fonts'
+
+" lean & mean status/tabline for vim that's light as air
+Bundle 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+
 " Ultimate auto-completion system
 " Bundle 'Shougo/neocomplcache'
 
@@ -420,7 +438,7 @@ colorscheme zenburn
 "                               vim-scripts repos                              "
 " ---------------------------------------------------------------------------- "
 
-" Fast and Easy Find and Replace Across Multiple Files 
+" Fast and Easy Find and Replace Across Multiple Files
 " <Leader>vv  - Grep for the word under the cursor, match all occurences, like |gstar|
 " <Leader>vV  - Grep for the word under the cursor, match whole word, like |star|
 " <Leader>va  - Like vv, but add to existing list
@@ -454,8 +472,8 @@ Bundle 'voogle'
 Bundle 'git-log'
 
 " Manage Most Recently Used (MRU) files.
-Bundle 'mru.vim'
-let MRU_File = "/home/sven/.vim/.vim_mru_files"
+"Bundle 'mru.vim'
+"let MRU_File = "$HOME/.vim/.vim_mru_files"
 
 " summerfruit256
 Bundle 'summerfruit256.vim'
