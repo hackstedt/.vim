@@ -138,9 +138,7 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ \(%{tabpagewinnr(tabpagenr())}
 
 set t_Co=256                    " Use 256 colors in terminal
 syntax enable                   " Syntax highlighting
-set background=dark             " If using a dark background within the editing area and syntax highlighting turn on this option as well
-
-let g:solarized_termcolors=256  " Tell solarized to use 256 colors in Terminal
+set background=light            " light or dark depending on the colorscheme
 
 " Use individual colorscheme depending on given fyletype:
 let g:colors_name = "nil"
@@ -385,6 +383,7 @@ Bundle 'scrooloose/nerdcommenter'
 
 " Precision colorscheme for the vim text editor
 Bundle 'altercation/vim-colors-solarized'
+let g:solarized_termcolors=256  " Tell solarized to use 256 colors in Terminal
 
 " A port of the Railscasts Textmate theme to Vim
 Bundle 'jpo/vim-railscasts-theme'
@@ -397,6 +396,17 @@ Bundle 'Lokaltog/vim-distinguished'
 
 " 256 colors version of github vim colorscheme
 Bundle 'joedicastro/vim-github256'
+
+" vividchalk
+Bundle 'tpope/vim-vividchalk'
+
+" Zenburn
+Bundle 'jnurmine/Zenburn'
+
+" Gravity
+Bundle 'gregsexton/Gravity'
+
+colorscheme zenburn
 
 "                               vim-scripts repos                              "
 " ---------------------------------------------------------------------------- "
@@ -437,6 +447,21 @@ Bundle 'git-log'
 " Manage Most Recently Used (MRU) files.
 Bundle 'mru.vim'
 let MRU_File = "/home/sven/.vim/.vim_mru_files"
+
+" summerfruit256
+Bundle 'summerfruit256.vim'
+
+" AutumnLeaf
+Bundle'AutumnLeaf'
+
+" ironman.vim
+Bundle 'ironman.vim'
+
+" oceanlight
+Bundle 'oceanlight'
+
+" simpleandfriendly.vim
+Bundle 'simpleandfriendly.vim'
 
 "                               Non github repo                                "
 " ---------------------------------------------------------------------------- "
