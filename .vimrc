@@ -143,17 +143,21 @@ set background=light            " light or dark depending on the colorscheme
 " Use individual colorscheme depending on given fyletype:
 let g:colors_name = "nil"
 let last_colorscheme = g:colors_name
-au BufLeave * let last_colorscheme = g:colors_name
-augroup filetype_colorscheme
-" REFACT: Make a list/array containing the following filetypes:
-  au BufEnter * if &ft == "sass" || &ft == "scss.css" || &ft == "scss" || &ft == "css"
-\ |  if last_colorscheme != "distinguished"
-\ |    colorscheme distinguished
-\ |  endif
-\ |elseif last_colorscheme != "solarized" && &ft != "nerdtree"
-\ |  syntax enable | set background=dark | colorscheme solarized
-\ |endif
-augroup END
+"au BufLeave * let last_colorscheme = g:colors_name
+"augroup filetype_colorscheme
+"" REFACT: Make a list/array containing the following filetypes:
+  "au BufEnter * if &ft == "sass" || &ft == "scss.css" || &ft == "scss" || &ft == "css"
+"\ |  if last_colorscheme != "distinguished"
+"\ |    colorscheme distinguished
+"\ |  endif
+"\ |elseif &ft == "ruby"
+"\ |  if last_colorscheme != "railscasts"
+"\ |    colorscheme railscasts
+"\ |  endif
+"\ |elseif last_colorscheme != "solarized" && &ft != "nerdtree"
+"\ |  syntax enable | set background=dark | colorscheme solarized
+"\ |endif
+"augroup END
 "\ |   ColorHighlight!
 
 
