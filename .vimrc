@@ -365,6 +365,11 @@ Bundle 'wesleyche/SrcExpl'
 
 Bundle 'scrooloose/nerdcommenter'
 
+" Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box.
+Bundle 'klen/python-mode'
+let g:pymode_folding = 0
+let g:pymode_lint_hold = 0
+
 
 " Ultimate auto-completion system
 " Bundle 'Shougo/neocomplcache'
