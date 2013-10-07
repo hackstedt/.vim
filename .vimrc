@@ -472,8 +472,8 @@ Bundle 'voogle'
 Bundle 'git-log'
 
 " Manage Most Recently Used (MRU) files.
-"Bundle 'mru.vim'
-"let MRU_File = "$HOME/.vim/.vim_mru_files"
+Bundle 'mru.vim'
+let MRU_File = $HOME . '/.vim/.vim_mru_files'
 
 " summerfruit256
 Bundle 'summerfruit256.vim'
