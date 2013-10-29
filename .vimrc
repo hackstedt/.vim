@@ -152,8 +152,8 @@ set background=light            " light or dark depending on the colorscheme
 
 
 " Use individual colorscheme depending on given fyletype:
-let g:colors_name = "nil"
-let last_colorscheme = g:colors_name
+"let g:colors_name = "nil"
+"let last_colorscheme = g:colors_name
 "au BufLeave * let last_colorscheme = g:colors_name
 "augroup filetype_colorscheme
 "" REFACT: Make a list/array containing the following filetypes:
@@ -207,8 +207,10 @@ if exists('+undofile')          " Keep a persistent backup file
 end
 " set ttyfast                   " Always use a fast terminal
 " set cursorline                " Underline the current line, for quick orientation
+
 " Open a file at the last edited location:
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 "augroup myvimrc " Autoload/resource the *vimrc - file after saving it
   "au!
   "au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
@@ -228,6 +230,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g
 
 
 autocmd vimenter * NERDTree " Open a NERDTree automatically when vim starts up
+
 " Close vim if the only window left open is a NERDTree:
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
