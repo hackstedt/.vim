@@ -205,7 +205,7 @@ if exists('+undofile')          " Keep a persistent backup file
   set undofile
   set undodir=~/.vim/.undo,~/tmp,/tmp
 end
-" set ttyfast                   " Always use a fast terminal
+set ttyfast                     " Always use a fast terminal
 " set cursorline                " Underline the current line, for quick orientation
 
 " Open a file at the last edited location:
