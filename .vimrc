@@ -396,6 +396,9 @@ let g:pymode_lint_hold = 0
 Bundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 
+" greatly improves HTML & CSS workflow
+" Bundle "mattn/emmet-vim"
+
 " Ultimate auto-completion system
 " Bundle 'Shougo/neocomplcache'
 
