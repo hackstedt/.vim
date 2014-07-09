@@ -333,6 +333,9 @@ Bundle 'tpope/vim-fugitive'
 " Ruby on Rails power tools
 Bundle 'tpope/vim-rails'
 
+" Vim runtime files for Haml, Sass, and SCSS
+Bundle 'tpope/vim-haml'
+
 " Exploring the source code based on "tags", and it works like the context window of "Source Insight".
 " Open the Source Explorer window with :SrcExpl or :SrcExplToggle or map these commands to keys in your .vimrc.
 Bundle 'wesleyche/SrcExpl'
