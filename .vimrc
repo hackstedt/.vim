@@ -69,6 +69,7 @@ nnoremap <F7> :m .+1<CR>==
 vnoremap <F7> :m '>+1<CR>gv=gv
 
 nnoremap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
+nnoremap <F12> o- binding.pry<Esc>:w<CR>   " Quick insertion and writing
 
 
 
