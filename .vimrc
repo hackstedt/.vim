@@ -70,6 +70,7 @@ nnoremap <F7> :m .+1<CR>==
 vnoremap <F7> :m '>+1<CR>gv=gv
 
 nnoremap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
+nnoremap tt :ToggleWord<CR>
 nnoremap <F12> o- binding.pry<Esc>:w<CR>   " Quick insertion and writing
 
 
@@ -500,6 +501,9 @@ Bundle 'git-log'
 " Manage Most Recently Used (MRU) files.
 Bundle 'mru.vim'
 let MRU_File = $HOME . '/.vim/.vim_mru_files'
+
+" it can toggle words
+Bundle 'toggle_words.vim'
 
 " summerfruit256
 Bundle 'summerfruit256.vim'
