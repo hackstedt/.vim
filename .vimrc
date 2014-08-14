@@ -31,11 +31,12 @@
        "-----------------------------------------------------------------------"
 
 
-" TODO If you get out of insert mode, the coursor jumps 6 chars to the right.
-" - Prevent this.
-inoremap rr <Esc>       " Quickly get out of insert mode
-imap ww <Esc>:w<CR>     " Quickly get out of insert mode and write file
-nnoremap ^ <ESC>:w<CR>  " Quickly write file in normal mode
+" Quickly get out of insert mode
+inoremap vv <Esc>
+" Quickly get out of insert mode and write file
+inoremap ww <Esc>:w<CR>
+" Quickly write file in normal mode
+nnoremap ^ <ESC>:w<CR>
 let mapleader = ','     " Choose a nicer leader-key
 " Use "ö"-key like ":"
 nnoremap ö :
