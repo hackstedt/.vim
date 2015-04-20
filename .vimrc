@@ -76,6 +76,10 @@ nmap tt :ToggleWord<CR>
 nmap <F12> o- binding.pry<Esc>:w<CR>   " Quick insertion and writing
 nmap <C-F12> obinding.pry<Esc>:w<CR>   " Quick insertion and writing
 
+" Convert HTML to Haml within a Vim Buffer using the html2haml command-line tool
+" Installing is accomplished by: $ gem install html2haml
+nmap <leader>2haml :%!html2haml --erb 2> /dev/null<CR>:set ft=haml<CR>
+vmap <leader>2haml :!html2haml --erb 2> /dev/null<CR>
 
 
        "-----------------------------------------------------------------------:
