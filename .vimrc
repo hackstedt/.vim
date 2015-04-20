@@ -32,16 +32,16 @@
 
 
 " Quickly get out of insert mode
-inoremap vv <Esc>
+imap vv <Esc>
 " Quickly get out of insert mode and write file
-inoremap ww <Esc>:w<CR>
+imap ww <Esc>:w<CR>
 " Quickly write file in normal mode
-nnoremap ^ <ESC>:w<CR>
+nmap ^ <ESC>:w<CR>
 let mapleader = ','     " Choose a nicer leader-key
 " Use "ö"-key like ":"
-nnoremap ö :
+map ö :
 " Use "ä"-key like "/"
-nnoremap ä /
+map ä /
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
@@ -51,27 +51,27 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-nnoremap ,m4 <C-w>>     " Resize window
-nnoremap ,m6 <C-w><
-nnoremap ,m8 <C-w>-
-nnoremap ,m2 <C-w>+
+map <leader>m4 <C-w>>   " Resize window
+map <leader>m6 <C-w><
+map <leader>m8 <C-w>-
+map <leader>m2 <C-w>+
 
 let i = 1               " More easy window navigation
 while i <= 9
-  execute 'nnoremap <Leader>' . i . ' :' . i . 'wincmd w<CR>'
+  execute 'map <Leader>' . i . ' :' . i . 'wincmd w<CR>'
   let i = i + 1
 endwhile
 
-nnoremap <F8> :m .-2<CR>==          " Move lines of text or a whole block up or down
-inoremap <F8> <Esc>:m .-2<CR>==gi   " TODO Better mapping
-vnoremap <F8> :m '<-2<CR>gv=gv
-inoremap <F7> <Esc>:m .+1<CR>==gi
-nnoremap <F7> :m .+1<CR>==
-vnoremap <F7> :m '>+1<CR>gv=gv
+nmap <F8> :m .-2<CR>==          " Move lines of text or a whole block up or down
+imap <F8> <Esc>:m .-2<CR>==gi   " TODO Better mapping
+vmap <F8> :m '<-2<CR>gv=gv
+imap <F7> <Esc>:m .+1<CR>==gi
+nmap <F7> :m .+1<CR>==
+vmap <F7> :m '>+1<CR>gv=gv
 
-nnoremap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
-nnoremap tt :ToggleWord<CR>
-nnoremap <F12> o- binding.pry<Esc>:w<CR>   " Quick insertion and writing
+nmap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
+nmap tt :ToggleWord<CR>
+nmap <F12> o- binding.pry<Esc>:w<CR>   " Quick insertion and writing
 
 
 
