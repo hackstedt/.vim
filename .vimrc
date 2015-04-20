@@ -42,6 +42,8 @@ let mapleader = ','     " Choose a nicer leader-key
 map ö :
 " Use "ä"-key like "/"
 map ä /
+" Press Ä to toggle highlighting on/off, and show current value.
+map Ä :set hlsearch! hlsearch?<CR>
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
@@ -72,6 +74,7 @@ vmap <F7> :m '>+1<CR>gv=gv
 nmap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
 nmap tt :ToggleWord<CR>
 nmap <F12> o- binding.pry<Esc>:w<CR>   " Quick insertion and writing
+nmap <C-F12> obinding.pry<Esc>:w<CR>   " Quick insertion and writing
 
 
 
