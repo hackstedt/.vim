@@ -418,7 +418,6 @@ let g:airline_powerline_fonts = 1
 " A vim plugin for running your Ruby testsx:
 " Bundle 'skalnik/vim-vroom'
 
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 
 "                                vim-color theme                               "
