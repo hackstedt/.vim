@@ -73,8 +73,9 @@ vmap <F7> :m '>+1<CR>gv=gv
 
 nmap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
 nmap tt :ToggleWord<CR>
-nmap <F12> o- binding.pry<Esc>:w<CR>   " Quick insertion and writing
-nmap <C-F12> obinding.pry<Esc>:w<CR>   " Quick insertion and writing
+
+autocmd FileType ruby nmap <buffer> <F12> obinding.pry<Esc>:w<CR>   " Quick insertion and writing
+autocmd FileType haml nmap <buffer> <F12> o- binding.pry<Esc>:w<CR> " Quick insertion and writing
 
 " Convert HTML to Haml within a Vim Buffer using the html2haml command-line tool
 " Installing is accomplished by: $ gem install html2haml
