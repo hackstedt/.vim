@@ -159,8 +159,6 @@ set statusline+=\ \(%{tabpagewinnr(tabpagenr())}\)  " Window number
 
 set t_Co=256                    " Use 256 colors in terminal
 syntax enable                   " Syntax highlighting
-set background=light            " light or dark depending on the colorscheme
-
 
 " Use individual colorscheme depending on given fyletype:
 "let g:colors_name = "nil"
@@ -430,9 +428,30 @@ let g:airline_powerline_fonts = 1
 " Precision colorscheme for the vim text editor
 Bundle 'altercation/vim-colors-solarized'
 let g:solarized_termcolors = 256    " Tell solarized to use 256 colors in Terminal
-"let g:solarized_contrast = "high"
+let g:solarized_contrast = "normal"
 let g:solarized_termtrans = 1
 let g:solarized_hitrail   = 1
+
+colorscheme solarized
+
+" Must be defined after the colorscheme ist initialized:
+
+"highlight SignColumn ctermbg=black
+"highlight LineNr     ctermbg=black
+"highlight CursorLine ctermbg=black
+
+"highlight SignifySignAdd    cterm=bold ctermbg=black  ctermfg=64
+"highlight SignifySignDelete cterm=bold ctermbg=black  ctermfg=160
+"highlight SignifySignChange cterm=bold ctermbg=black  ctermfg=166
+
+set background=light
+highlight SignColumn ctermbg=187
+highlight SignifySignAdd    cterm=bold ctermbg=187  ctermfg=64
+highlight SignifySignDelete cterm=bold ctermbg=187  ctermfg=160
+highlight SignifySignChange cterm=bold ctermbg=187  ctermfg=166
+
+"set background=dark
+"highlight SignColumn ctermbg=235
 
 
 " A port of the Railscasts Textmate theme to Vim
@@ -455,19 +474,6 @@ Bundle 'jnurmine/Zenburn'
 
 " Gravity
 Bundle 'gregsexton/Gravity'
-
-colorscheme solarized
-
-
-" Must be defined after the colorscheme ist initialized:
-
-highlight SignColumn ctermbg=black
-highlight LineNr     ctermbg=black
-highlight CursorLine ctermbg=black
-
-highlight SignifySignAdd    cterm=bold ctermbg=black  ctermfg=64
-highlight SignifySignDelete cterm=bold ctermbg=black  ctermfg=160
-highlight SignifySignChange cterm=bold ctermbg=black  ctermfg=166
 
 "                               vim-scripts repos                              "
 " ---------------------------------------------------------------------------- "
