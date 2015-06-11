@@ -531,27 +531,6 @@ let g:solarized_contrast = "normal"
 let g:solarized_termtrans = 1
 let g:solarized_hitrail   = 1
 
-colorscheme solarized
-
-" Must be defined after the colorscheme ist initialized:
-
-"highlight SignColumn ctermbg=black
-"highlight LineNr     ctermbg=black
-"highlight CursorLine ctermbg=black
-
-"highlight SignifySignAdd    cterm=bold ctermbg=black  ctermfg=64
-"highlight SignifySignDelete cterm=bold ctermbg=black  ctermfg=160
-"highlight SignifySignChange cterm=bold ctermbg=black  ctermfg=166
-
-set background=light
-highlight SignColumn ctermbg=187
-highlight SignifySignAdd    cterm=bold ctermbg=187  ctermfg=64
-highlight SignifySignDelete cterm=bold ctermbg=187  ctermfg=160
-highlight SignifySignChange cterm=bold ctermbg=187  ctermfg=166
-
-"set background=dark
-"highlight SignColumn ctermbg=235
-
 
 " A port of the Railscasts Textmate theme to Vim
 Plugin 'jpo/vim-railscasts-theme'
@@ -658,5 +637,24 @@ filetype plugin indent on
 
 "                   These settings only works after Vundle                     "
 " ---------------------------------------------------------------------------- "
-"
-" Feed me!
+
+colorscheme solarized
+
+" Must be defined after the colorscheme ist initialized:
+
+"highlight SignColumn ctermbg=black
+"highlight LineNr     ctermbg=black
+"highlight CursorLine ctermbg=black
+
+"highlight SignifySignAdd    cterm=bold ctermbg=black  ctermfg=64
+"highlight SignifySignDelete cterm=bold ctermbg=black  ctermfg=160
+"highlight SignifySignChange cterm=bold ctermbg=black  ctermfg=166
+
+set background=light
+highlight SignColumn ctermbg=187
+highlight SignifySignAdd    cterm=bold ctermbg=187  ctermfg=64
+highlight SignifySignDelete cterm=bold ctermbg=187  ctermfg=160
+highlight SignifySignChange cterm=bold ctermbg=187  ctermfg=166
+
+"set background=dark
+"highlight SignColumn ctermbg=235
