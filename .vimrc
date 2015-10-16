@@ -316,7 +316,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 
 " color hex codes and color names
 "Plugin 'chrisbra/color_highlight'
-"let g:colorizer_auto_filetype='css,scss,scss.css,sass,html'
+"let g:colorizer_auto_filetype='css,scss,sass,html'
 "let g:colorizer_auto_color = 1
 
 " Provides insert mode auto-completion for quotes, parens, brackets, etc.
