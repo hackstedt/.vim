@@ -412,6 +412,7 @@ Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+
 " ri plugin for Vim
 Plugin 'danchoi/ri.vim'
 
