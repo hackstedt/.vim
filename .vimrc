@@ -269,9 +269,10 @@ inoremap <F4> <Esc>:NERDTreeToggle<CR>
        "-----------------------------------------------------------------------:
 
 
-filetype off " Must be declared before Vundle stuff
+set nocompatible  " be iMproved, required
+filetype off      " Must be declared before Vundle stuff
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 
@@ -279,7 +280,7 @@ call vundle#begin()
 " ---------------------------------------------------------------------------- "
 
 " Let Vundle manage Vundle, required!
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " HTML5 omnicomplete and syntax
 Plugin 'othree/html5.vim'
