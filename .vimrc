@@ -408,12 +408,13 @@ let g:pymode_lint_hold = 0
 
 
 " Powerline-fonts for the use with vim-airline
-"Plugin 'Lokaltog/powerline-fonts'
+Plugin 'Lokaltog/powerline-fonts'
 
 " lean & mean status/tabline for vim that's light as air
-Plugin 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 
 " ri plugin for Vim
