@@ -238,10 +238,12 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g
        "-----------------------------------------------------------------------:
 
 
-autocmd vimenter * NERDTree " Open a NERDTree automatically when vim starts up
+" Open a NERDTree when vim starts up without a file to open
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if the only window left open is a NERDTree:
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " let NERDTreeCaseSensitiveSort=1
 let NERDTreeAutoDeleteBuffer=1
