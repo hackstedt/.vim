@@ -327,13 +327,27 @@ Plugin 'majutsushi/tagbar'
 " Shows all added, deleted and modified lines since the last commit via Vim its sign column.
 " For more info: :h signify-options
 Plugin 'mhinz/vim-signify'
-let g:signify_vcs_list = [ 'git' ]
-let g:signify_mapping_next_hunk = '<leader>gj'
-let g:signify_mapping_prev_hunk = '<leader>gk'
-let g:signify_mapping_toggle_highlight = '<leader>gh'
-let g:signify_update_on_bufenter = 1
-let g:signify_cursorhold_normal = 0
-let g:signify_cursorhold_insert = 0
+let g:signify_vcs_list              = [ 'git', 'hg' ]
+let g:signify_cursorhold_insert     = 1
+let g:signify_cursorhold_normal     = 1
+let g:signify_update_on_bufenter    = 0
+let g:signify_update_on_focusgained = 1
+
+nnoremap <leader>gt :SignifyToggle<CR>
+nnoremap <leader>gh :SignifyToggleHighlight<CR>
+nnoremap <leader>gr :SignifyRefresh<CR>
+nnoremap <leader>gd :SignifyDebug<CR>
+
+" hunk jumping
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
+
+" hunk text object
+omap ic <plug>(signify-motion-inner-pending)
+xmap ic <plug>(signify-motion-inner-visual)
+omap ac <plug>(signify-motion-outer-pending)
+xmap ac <plug>(signify-motion-outer-visual)
+
 
 " Visually displaying indent levels in Vim.
 " The default mapping to toggle the plugin is <Leader>ig
