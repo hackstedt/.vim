@@ -462,6 +462,15 @@ Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+" Add the window number in front of the mode
+" Part 1/2
+function! WindowNumber(...)
+  let builder = a:1
+  let context = a:2
+  call builder.add_section('airline_b', '%{tabpagewinnr(tabpagenr())}')
+  return 0
+endfunction
+
 
 " ri plugin for Vim
 Plugin 'danchoi/ri.vim'
@@ -726,3 +735,9 @@ highlight SignifySignChange cterm=bold ctermbg=187  ctermfg=166
 
 "set background=dark
 "highlight SignColumn ctermbg=235
+
+
+" Add the window number in front of the mode
+" Part 2/2
+call airline#add_statusline_func('WindowNumber')
+call airline#add_inactive_statusline_func('WindowNumber')
