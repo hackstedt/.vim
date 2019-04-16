@@ -223,6 +223,8 @@ set nobackup                    " Do not keep backup files, it's 70's style clut
 set noswapfile                  " Do not write annoying intermediate swap files, who did ever restore from swap files anyway?
 set directory=~/.vim/.tmp,~/tmp,/tmp " Store swap files in one of these directories (in case swapfile is ever turned on)
 set viminfo='20,\"80            " Read/write a .viminfo file, don't store more than 80 lines of registers
+set path +=**                   " Find files in subdirs as well
+                                " Tim Pope is not amused about this: https://twitter.com/tpope/status/612991667751264256
 set wildmenu                    " Make tab completion for files/buffers act like bash
 set wildmode=list:full          " Show a list when pressing tab and complete first full match
 set wildignore=*.swp,*.bak,*.pyc,*.class
