@@ -351,7 +351,11 @@ xmap ac <plug>(signify-motion-outer-visual)
 
 " Visually displaying indent levels in Vim.
 " The default mapping to toggle the plugin is <Leader>ig
-Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'nathanaelkane/vim-indent-guides'
+
+" A vim plugin to display the indention levels with thin vertical lines
+Plugin 'Yggdroot/indentLine'
+let g:indentLine_color_term = 253
 
 " Provides syntax and indent plugins.
 Plugin 'pangloss/vim-javascript'
