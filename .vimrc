@@ -55,8 +55,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-map <leader>m4 <C-w>>   " Resize window
-map <leader>m6 <C-w><
+map <leader>m6 <C-w>>   " Resize window
+map <leader>m4 <C-w><
 map <leader>m8 <C-w>-
 map <leader>m2 <C-w>+
 
