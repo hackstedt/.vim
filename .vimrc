@@ -636,6 +636,10 @@ Plugin 'kshenoy/vim-signature'
 "  m?           Open location list and display markers from current buffer
 "  m<BS>        Remove all markers
 
+" *visualstar* is a Vim plugin to provide a |star| feature for |Visual-mode|.
+" In other words, you can search your selection text in |Visual-mode|.
+Plugin 'thinca/vim-visualstar'
+
 
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
