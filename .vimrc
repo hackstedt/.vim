@@ -125,13 +125,21 @@ set shiftround                  " Use multiple of shiftwidth when indenting with
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
 set autoindent                  " Always set autoindenting on
 set copyindent                  " Copy the previous indentation on autoindenting
-set number                      " Always show line numbers
 set smarttab                    " Insert tabs on the start of a line according to shiftwidth, not tabstop
 set scrolloff=4                 " Keep 4 lines off the edges of the screen when scrolling
 set hlsearch                    " Highlight search terms
 set gdefault                    " Search/replace 'globally' (on a line) by default
 set nolist                      " Don't show invisible characters by default, but it can be enabled for some file types
 set pastetoggle=<F2>            " When in insert mode, press <F2> to go to paste mode, where you can paste mass data that won't be autoindented
+
+set number                      " Always show line numbers
+set relativenumber              " Show relative line numbers
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * if (exists("b:NERDTree") && b:NERDTree.isTabTree()) | set nonumber | else | set relativenumber | endif
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " set autowrite                 " Automatically save before commands like :next and :make
 " set hidden                    " Hide buffers when they are abandoned
 " set virtualedit=all           " Allow the cursor to go in to 'invalid' places
