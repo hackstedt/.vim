@@ -44,6 +44,8 @@ map ö :
 map ä /
 " Press Ä to toggle highlighting on/off, and show current value.
 map Ä :set hlsearch! hlsearch?<CR>
+" Press F6 to toggle wrapscan around
+map <F6> :set wrapscan! wrapscan?<CR>
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
