@@ -368,8 +368,6 @@ Plugin 'cakebaker/scss-syntax.vim'
 "let g:colorizer_auto_filetype='css,scss,sass,html'
 "let g:colorizer_auto_color = 1
 
-" Provides insert mode auto-completion for quotes, parens, brackets, etc.
-Plugin 'Raimondi/delimitMate'
 
 " The NERD tree allows you to explore your filesystem and to open files and directories.
 Plugin 'scrooloose/nerdtree'
@@ -397,6 +395,8 @@ Plugin 'tpope/vim-rails'
 " Vim runtime files for Haml, Sass, and SCSS
 Plugin 'tpope/vim-haml'
 
+" Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
+Plugin 'tpope/vim-surround'
 " Exploring the source code based on "tags", and it works like the context window of "Source Insight".
 " Open the Source Explorer window with :SrcExpl or :SrcExplToggle or map these commands to keys in your .vimrc.
 Plugin 'wesleyche/SrcExpl'
