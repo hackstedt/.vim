@@ -99,6 +99,14 @@ imap ,pf <C-R>=expand('%:t')<CR>    " Paste Filename
 nmap ,pF :put =expand('%:p')<CR>    " Paste Fullpath/Filename
 imap ,pF <C-R>=expand('%:p')<CR>    " Paste Fullpath/Filename
 
+" Mergetool
+map gre :diffg RE<CR> " get from REMOTE
+map gba :diffg BA<CR> " get from BASE
+map glo :diffg LO<CR> " get from LOCAL
+map glo :diffg LO<CR> " get from LOCAL
+map gn ]c
+map gp [c
+
 
        "-----------------------------------------------------------------------:
        " + - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - + :
