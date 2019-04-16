@@ -81,6 +81,7 @@ autocmd FileType ruby nmap <buffer> <F12> obinding.pry<Esc>:w<CR>        " bindi
 autocmd FileType haml nmap <buffer> <F12> o- binding.pry<Esc>:w<CR>
 autocmd FileType ruby nmap <buffer> <S-F12> $hhi, focus: true<Esc>:w<CR> " focus: true for the specs
 autocmd FileType ruby nmap <buffer> <C-F12> :s/, focus: true//g<CR>
+map <leader>jl oconsole.log("");<Esc>hhi
 
 " Convert HTML to Haml within a Vim Buffer using the html2haml command-line tool
 " Installing is accomplished by: $ gem install html2haml
