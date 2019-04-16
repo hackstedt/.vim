@@ -248,6 +248,11 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g
   "au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 "augroup END
 
+"Browsing man pages in vim
+let $GROFF_NO_SGR=1
+source $VIMRUNTIME/ftplugin/man.vim
+nmap K :Man <cword><CR>
+
 
 
        "-----------------------------------------------------------------------:
