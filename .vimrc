@@ -84,6 +84,17 @@ autocmd FileType haml nmap <buffer> <F12> o- binding.pry<Esc>:w<CR> " Quick inse
 nmap <leader>2haml :%!html2haml --erb 2> /dev/null<CR>:set ft=haml<CR>
 vmap <leader>2haml :!html2haml --erb 2> /dev/null<CR>
 
+nmap ,cf :let @+=expand("%:t")<CR>  " Copy Fileame to the Clipboard
+nmap ,cF :let @+=expand("%:p")<CR>  " Copy Fullpath/Fileame to the Clipboard
+
+nmap ,yf :let @"=expand("%:t")<CR>  " Yank Filename
+nmap ,yF :let @"=expand("%:p")<CR>  " Yank Fullpath/Filename
+
+nmap ,pf :put =expand('%:t')<CR>    " Paste Filename
+imap ,pf <C-R>=expand('%:t')<CR>    " Paste Filename
+nmap ,pF :put =expand('%:p')<CR>    " Paste Fullpath/Filename
+imap ,pF <C-R>=expand('%:p')<CR>    " Paste Fullpath/Filename
+
 
        "-----------------------------------------------------------------------:
        " + - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - + :
