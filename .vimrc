@@ -487,6 +487,9 @@ function! WindowNumber(...)
 endfunction
 
 
+" Always highlight enclosing tags
+Plugin 'valloric/MatchTagAlways'
+
 " ri plugin for Vim
 Plugin 'danchoi/ri.vim'
 
