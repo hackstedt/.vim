@@ -42,6 +42,7 @@ let mapleader = ','     " Choose a nicer leader-key
 map ö :
 " Use "ä"-key like "/"
 map ä /
+nmap - '
 " Press Ä to toggle highlighting on/off, and show current value.
 map Ä :set hlsearch! hlsearch?<CR>
 " Press F6 to toggle wrapscan around
