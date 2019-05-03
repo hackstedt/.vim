@@ -295,8 +295,12 @@ if bufnr("[No Name]") != -1
 endif
 
 " Shortcut to toggle NERDTree on/off
-map <F4> :NERDTreeToggle<CR>
+noremap <F4> :NERDTreeToggle<CR>
 inoremap <F4> <Esc>:NERDTreeToggle<CR>
+
+" Find current file in NERDTREE
+noremap  <F3> :NERDTreeFind<CR>
+inoremap <F3> <Esc>:NERDTreeFind<CR>
 
 
 
