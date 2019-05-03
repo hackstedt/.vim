@@ -260,10 +260,9 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g
   "au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 "augroup END
 
-"Browsing man pages in vim
-let $GROFF_NO_SGR=1
+" Browsing man pages in vim
+let $GROFF_NO_SGR=1 " If you see a whole lot of garbage on the screen, try adding this [SGR (Ansi escape sequences)]
 source $VIMRUNTIME/ftplugin/man.vim
-nmap K :Man <cword><CR>
 
 
 
