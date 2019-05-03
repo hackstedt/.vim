@@ -74,7 +74,6 @@ imap <F7> <Esc>:m .+1<CR>==gi
 nmap <F7> :m .+1<CR>==
 vmap <F7> :m '>+1<CR>gv=gv
 
-nmap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
 nmap tt :ToggleWord<CR>
 
 " Quick insertions
@@ -693,8 +692,13 @@ Plugin 'gregsexton/Gravity'
 " <Leader>vo  - Select the files to search in and set grep options
 Plugin 'EasyGrep'
 
-" Display your undo history in a graph
-Plugin 'undotree.vim'
+"" Display your undo history in a graph
+"Plugin 'mbbill/undotree'
+"nmap <F5> :UndotreeToggle<cr>   " Shortcut to toggle Undotree on/off
+
+" Vim undo tree visualizer
+Plugin 'simnalamburt/vim-mundo'
+nmap <F5> :MundoToggle<cr>
 
 " The shortcut is gs You can google for the word under the cursor in normal mode,
 " or you can search for selected text in visual mode.
