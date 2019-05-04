@@ -152,6 +152,9 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
+set noautowrite                 " Never write a file unless I request it.
+set noautowriteall              " NEVER.
+
 " set autowrite                 " Automatically save before commands like :next and :make
 " set hidden                    " Hide buffers when they are abandoned
 " set virtualedit=all           " Allow the cursor to go in to 'invalid' places
