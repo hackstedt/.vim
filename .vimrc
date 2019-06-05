@@ -391,6 +391,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'scrooloose/nerdtree'
 
 " Syntax checking hacks for vim
+" Recommendations:
+" apt-get install shellcheck
 Plugin 'vim-syntastic/syntastic'
 
 " Vim sugar for the UNIX shell commands that need it the most. Commands include:
