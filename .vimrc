@@ -390,8 +390,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 " The NERD tree allows you to explore your filesystem and to open files and directories.
 Plugin 'scrooloose/nerdtree'
 
-" Syntastic is a syntax checking plugin that runs files through external syntax checkers and displays any resulting errors to the user
-Plugin 'scrooloose/syntastic'
+" Syntax checking hacks for vim
+Plugin 'vim-syntastic/syntastic'
 
 " Vim sugar for the UNIX shell commands that need it the most. Commands include:
 " :Unlink: Delete a buffer and the file on disk simultaneously.
