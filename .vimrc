@@ -282,7 +282,6 @@ source $VIMRUNTIME/ftplugin/man.vim
 
 " Open a NERDTree when vim starts up without a file to open
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if the only window left open is a NERDTree:
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -326,6 +325,16 @@ call vundle#begin()
 
 "                          Original repos on github                            "
 " ---------------------------------------------------------------------------- "
+
+" The fancy start screen for Vim.
+Plugin 'mhinz/vim-startify'
+let g:startify_fortune_use_unicode = 1
+autocmd VimEnter *
+      \   if !argc()
+      \ |   Startify
+      \ |   if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+      \ |   wincmd w
+      \ | endif
 
 " Let Vundle manage Vundle, required!
 Plugin 'VundleVim/Vundle.vim'
