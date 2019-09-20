@@ -606,13 +606,6 @@ let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-" Easy note taking in Vim
-Plugin 'xolox/vim-notes'
-" Miscellaneous auto-load Vim scripts
-" Needet for vim-notes
-Plugin 'xolox/vim-misc'
-let g:notes_directories = ['~/Dropbox/Vim-Notes']
-
 
 Plugin 'thoughtbot/vim-rspec'
 
