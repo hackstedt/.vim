@@ -380,6 +380,9 @@ xmap ac <plug>(signify-motion-outer-visual)
 " A vim plugin to display the indention levels with thin vertical lines
 Plugin 'Yggdroot/indentLine'
 let g:indentLine_color_term = 253
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" This plugin enables the Vim conceal feature which automatically hides stretches of text based on syntax highlighting. This setting will apply to all syntax items.
+" set conceallevel=0
 
 " Provides syntax and indent plugins.
 Plugin 'pangloss/vim-javascript'
