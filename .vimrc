@@ -657,6 +657,9 @@ Plugin 'lfv89/vim-interestingwords'
 " Navigate with n and N
 " Clear highlights with <Leader>K
 
+" View images in Vim, because Vim is awesome!
+Plugin 'ashisha/image.vim'
+
 
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
