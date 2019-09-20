@@ -235,8 +235,8 @@ set switchbuf=useopen           " Reveal already opened files from the quickfix 
 set history=1000                " Remember more commands and search history
 set undolevels=1000             " Use many muchos levels of undo
 set nobackup                    " Do not keep backup files, it's 70's style cluttering
-set noswapfile                  " Do not write annoying intermediate swap files, who did ever restore from swap files anyway?
-set directory=~/.vim/.tmp,~/tmp,/tmp " Store swap files in one of these directories (in case swapfile is ever turned on)
+" set noswapfile                  " Do not write annoying intermediate swap files, who did ever restore from swap files anyway?
+" set directory=~/.vim/.tmp,~/tmp,/tmp " Store swap files in one of these directories (in case swapfile is ever turned on)
 set viminfo='20,\"80            " Read/write a .viminfo file, don't store more than 80 lines of registers
 set path +=**                   " Find files in subdirs as well
                                 " Tim Pope is not amused about this: https://twitter.com/tpope/status/612991667751264256
