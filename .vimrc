@@ -390,10 +390,9 @@ Plugin 'pangloss/vim-javascript'
 " Vim Syntax File for SCSS (Sassy CSS)
 Plugin 'cakebaker/scss-syntax.vim'
 
-" color hex codes and color names
-"Plugin 'chrisbra/color_highlight'
+"" A plugin to color colornames and codes
+"Plugin 'chrisbra/Colorizer'
 "let g:colorizer_auto_filetype='css,scss,sass,html'
-"let g:colorizer_auto_color = 1
 
 
 " The NERD tree allows you to explore your filesystem and to open files and directories.
