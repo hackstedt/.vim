@@ -74,8 +74,6 @@ imap <F7> <Esc>:m .+1<CR>==gi
 nmap <F7> :m .+1<CR>==
 vmap <F7> :m '>+1<CR>gv=gv
 
-nmap tt :ToggleWord<CR>
-
 " Quick insertions
 autocmd FileType ruby nmap <buffer> <F12> obinding.pry<Esc>:w<CR>        " binding.pry
 autocmd FileType haml nmap <buffer> <F12> o- binding.pry<Esc>:w<CR>
@@ -737,6 +735,7 @@ map mru :MRU<CR>
 
 " it can toggle words
 Plugin 'toggle_words.vim'
+nmap <leader>tt :ToggleWord<CR>
 
 " summerfruit256
 Plugin 'summerfruit256.vim'
