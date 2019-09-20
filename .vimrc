@@ -348,9 +348,6 @@ Plugin 'jiangmiao/auto-pairs'
 " It handles syntax, indenting, compiling, and more. Also included is support for CoffeeScript in Haml and HTML.
 Plugin 'kchmck/vim-coffee-script'
 
-" Browsing the tags of source code files. It provides a sidebar that displays the ctags-generated tags of the current file, ordered by their scope. This means that for example methods in C++ are displayed under the class they are defined in.
-Plugin 'majutsushi/tagbar'
-
 " Shows all added, deleted and modified lines since the last commit via Vim its sign column.
 " For more info: :h signify-options
 Plugin 'mhinz/vim-signify'
