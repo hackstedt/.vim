@@ -651,6 +651,12 @@ Plugin 'thinca/vim-visualstar'
 Plugin 'unblevable/quick-scope'
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
+" vim-interestingwords
+Plugin 'lfv89/vim-interestingwords'
+" Highlight with <Leader>k
+" Navigate with n and N
+" Clear highlights with <Leader>K
+
 
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
