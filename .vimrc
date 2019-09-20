@@ -674,27 +674,29 @@ let g:solarized_contrast = "normal"
 let g:solarized_termtrans = 1
 let g:solarized_hitrail   = 1
 
+" Solarized 8: True Colors
+"Plugin 'lifepillar/vim-solarized8'
 
 " A port of the Railscasts Textmate theme to Vim
-Plugin 'jpo/vim-railscasts-theme'
+"Plugin 'jpo/vim-railscasts-theme'
 
 " Guardian is originally created for XHTML and CSS editing, however you can use it for Ruby and JavaScript development as well.
-Plugin 'Suave/vim-colors-guardian'
+"Plugin 'Suave/vim-colors-guardian'
 
 " It’s perfect for JavaScript development.
-Plugin 'Lokaltog/vim-distinguished'
+"Plugin 'Lokaltog/vim-distinguished'
 
 " 256 colors version of github vim colorscheme
-Plugin 'joedicastro/vim-github256'
+"Plugin 'joedicastro/vim-github256'
 
 " vividchalk
-Plugin 'tpope/vim-vividchalk'
+"Plugin 'tpope/vim-vividchalk'
 
 " Zenburn
-Plugin 'jnurmine/Zenburn'
+"Plugin 'jnurmine/Zenburn'
 
 " Gravity
-Plugin 'gregsexton/Gravity'
+"Plugin 'gregsexton/Gravity'
 
 "                               vim-scripts repos                              "
 " ---------------------------------------------------------------------------- "
@@ -747,19 +749,19 @@ Plugin 'toggle_words.vim'
 nmap <leader>tt :ToggleWord<CR>
 
 " summerfruit256
-Plugin 'summerfruit256.vim'
+"Plugin 'summerfruit256.vim'
 
 " AutumnLeaf
-Plugin'AutumnLeaf'
+"Plugin'AutumnLeaf'
 
 " ironman.vim
-Plugin 'ironman.vim'
+"Plugin 'ironman.vim'
 
 " oceanlight
-Plugin 'oceanlight'
+"Plugin 'oceanlight'
 
 " simpleandfriendly.vim
-Plugin 'simpleandfriendly.vim'
+"Plugin 'simpleandfriendly.vim'
 
 "                               Non github repo                                "
 " ---------------------------------------------------------------------------- "
@@ -788,6 +790,11 @@ filetype plugin indent on
 " ---------------------------------------------------------------------------- "
 
 colorscheme solarized
+
+"set background=light
+"colorscheme solarized8
+"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Must be defined after the colorscheme ist initialized:
 
