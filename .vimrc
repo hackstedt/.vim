@@ -649,6 +649,10 @@ Plugin 'kshenoy/vim-signature'
 " In other words, you can search your selection text in |Visual-mode|.
 Plugin 'thinca/vim-visualstar'
 
+" Lightning fast left-right movement in Vim
+Plugin 'unblevable/quick-scope'
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
