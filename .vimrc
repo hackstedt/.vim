@@ -425,9 +425,6 @@ Plugin 'tpope/vim-haml'
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 Plugin 'tpope/vim-surround'
-" Exploring the source code based on "tags", and it works like the context window of "Source Insight".
-" Open the Source Explorer window with :SrcExpl or :SrcExplToggle or map these commands to keys in your .vimrc.
-Plugin 'wesleyche/SrcExpl'
 
 " Vim plugin for intensely orgasmic commenting
 
