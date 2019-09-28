@@ -667,15 +667,15 @@ Plugin 'ashisha/image.vim'
 " It feels really nice especially for Ruby on Rails development
 " rgb256 <=> Included in this repo.
 
-" Precision colorscheme for the vim text editor
-Plugin 'altercation/vim-colors-solarized'
-let g:solarized_termcolors = 256    " Tell solarized to use 256 colors in Terminal
-let g:solarized_contrast = "normal"
-let g:solarized_termtrans = 1
-let g:solarized_hitrail   = 1
+"" Precision colorscheme for the vim text editor
+"Plugin 'altercation/vim-colors-solarized'
+"let g:solarized_termcolors = 256    " Tell solarized to use 256 colors in Terminal
+"let g:solarized_contrast = "normal"
+"let g:solarized_termtrans = 1
+"let g:solarized_hitrail   = 1
 
-" Solarized 8: True Colors
-"Plugin 'lifepillar/vim-solarized8'
+" Optimized Solarized colorschemes. Best served with true-color terminals!
+Plugin 'lifepillar/vim-solarized8'
 
 " A port of the Railscasts Textmate theme to Vim
 "Plugin 'jpo/vim-railscasts-theme'
@@ -789,14 +789,26 @@ filetype plugin indent on
 "                   These settings only works after Vundle                     "
 " ---------------------------------------------------------------------------- "
 
-colorscheme solarized
+set termguicolors
+colorscheme solarized8
 
-"set background=light
-"colorscheme solarized8
+" Must be defined after the colorscheme ist initialized:
+
+"set background=dark
+"highlight SignColumn guibg=#073642
+
+set background=light
+highlight SignColumn guibg=#EEE8D5
+
+
+"colorscheme solarized
+
+" Troubleshooting
+" Hey, I do not get the right colors when running Vim inside tmux or in my favourite true-color enabled terminal!
+" Try this:
 "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" Must be defined after the colorscheme ist initialized:
 
 "highlight SignColumn ctermbg=black
 "highlight LineNr     ctermbg=black
@@ -806,11 +818,11 @@ colorscheme solarized
 "highlight SignifySignDelete cterm=bold ctermbg=black  ctermfg=160
 "highlight SignifySignChange cterm=bold ctermbg=black  ctermfg=166
 
-set background=light
-highlight SignColumn ctermbg=187
-highlight SignifySignAdd    cterm=bold ctermbg=187  ctermfg=64
-highlight SignifySignDelete cterm=bold ctermbg=187  ctermfg=160
-highlight SignifySignChange cterm=bold ctermbg=187  ctermfg=166
+"set background=light
+"highlight SignColumn ctermbg=187
+"highlight SignifySignAdd    cterm=bold ctermbg=187  ctermfg=64
+"highlight SignifySignDelete cterm=bold ctermbg=187  ctermfg=160
+"highlight SignifySignChange cterm=bold ctermbg=187  ctermfg=166
 
 "set background=dark
 "highlight SignColumn ctermbg=235
