@@ -658,7 +658,7 @@ Plugin 'lfv89/vim-interestingwords'
 " Clear highlights with <Leader>K
 
 " View images in Vim, because Vim is awesome!
-Plugin 'ashisha/image.vim'
+Plugin 'hackstedt/image.vim'
 
 
 "                                vim-color theme                               "
@@ -720,7 +720,7 @@ nmap <F5> :MundoToggle<cr>
 
 " The shortcut is gs You can google for the word under the cursor in normal mode,
 " or you can search for selected text in visual mode.
-Plugin 'voogle'
+Plugin 'hackstedt/vim-voogle'
 
 " Bring up the history of a given file. It will list the history in the
 " window-pane on the left of the screen. If you hit enter it will diff that
