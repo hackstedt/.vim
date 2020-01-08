@@ -241,6 +241,7 @@ set path +=**                   " Find files in subdirs as well
 set wildmenu                    " Make tab completion for files/buffers act like bash
 set wildmode=list:full          " Show a list when pressing tab and complete first full match
 set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignorecase
 set title                       " Change the terminal's title
 set visualbell                  " Don't beep
 set noerrorbells                " Don't beep
