@@ -393,9 +393,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 "Plugin 'chrisbra/Colorizer'
 "let g:colorizer_auto_filetype='css,scss,sass,html'
 
-
-" The NERD tree allows you to explore your filesystem and to open files and directories.
-Plugin 'scrooloose/nerdtree'
+" A tree explorer plugin for vim.
+Plugin 'preservim/nerdtree'
 
 " Syntax checking hacks for vim
 " Recommendations:
@@ -469,7 +468,7 @@ Plugin 'tpope/vim-surround'
 " [count]<leader>cu |NERDComUncommentLine|
 " Uncomments the selected line(s).
 
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'preservim/nerdcommenter'
 
 " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box.
 Plugin 'klen/python-mode'
