@@ -19,21 +19,21 @@ Backup (or delete, if you haven't made any changes so far) your current .vimrc a
   rm -rf ~/.vim/
   ```
 
-Then, clone the repo using
+Then, clone the repo using:
 
 `git clone git://github.com/hackstedt/.vim.git ~/.vim`
 
-Finally softlink the repos' .vimrc to the $HOME/.vimrc:
+Softlink the repos' .vimrc to the $HOME/.vimrc:
 
 `ln -s ~/.vim/.vimrc ~/.vimrc`
 
-This repo uses vundle, a bundle management system for vim which is hosted on github, too. Clone it:
+This repo uses Vundle, a bundle management system for vim which is hosted on github, too. Clone it:
 
-`git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
-Finally, start vim (or vi, if aliased). Enter command mode and perform a BundleInstall typing
+Finally, launch vim and run `:PluginInstall`
+Alternatively install from command line: `vim +PluginInstall +qall`
 
-`:BundleInstall`
 
 ## License
 
