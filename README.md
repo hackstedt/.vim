@@ -21,7 +21,7 @@ Backup (or delete, if you haven't made any changes so far) your current .vimrc a
 
 Then, clone the repo using:
 
-`git clone git://github.com/hackstedt/.vim.git ~/.vim`
+`git clone https://github.com/hackstedt/.vim.git ~/.vim`
 
 Softlink the repos' .vimrc to the $HOME/.vimrc:
 
