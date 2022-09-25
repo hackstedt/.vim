@@ -674,6 +674,14 @@ Plugin 'lfv89/vim-interestingwords'
 " View images in Vim, because Vim is awesome!
 Plugin 'hackstedt/image.vim'
 
+" Creating gists
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/vim-gist'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
+
 
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
