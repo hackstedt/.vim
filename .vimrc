@@ -51,19 +51,25 @@ map <F6> :set wrapscan! wrapscan?<CR>
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
 
-vnoremap <leader>p "_dP " Don't override your register
+" Don't override your register
+vnoremap <leader>p "_dP
 nnoremap <leader>D "_D
 nnoremap <leader>dd "_dd
 vnoremap <leader>d "_d
 noremap <leader>x "_x
 noremap <leader>X "_X
 
-nnoremap <Space>yy "+yy " Yank/paste to/from system clipboard
+" Yank/paste to/from system clipboard
+nnoremap <Space>yy "+yy
 vnoremap <Space>y "+y
 nnoremap <Space>Y "+Y
 vnoremap <Space>p "+p
 nnoremap <Space>p "+p
 nnoremap <Space>P "+P
+" paste as newline
+nnoremap <Space>op o<Esc>"+p
+nnoremap <Space>Op O<Esc>"+P
+nnoremap <Space>OP O<Esc>"+P
 
 map <C-h> <C-w>h        " Easy window navigation
 map <C-j> <C-w>j
