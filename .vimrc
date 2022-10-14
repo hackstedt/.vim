@@ -67,9 +67,9 @@ vnoremap <Space>p "+p
 nnoremap <Space>p "+p
 nnoremap <Space>P "+P
 " paste as newline
-nnoremap <Space>op o<Esc>"+p
-nnoremap <Space>Op O<Esc>"+P
-nnoremap <Space>OP O<Esc>"+P
+nnoremap <Space>op o<C-r>+<Esc>
+nnoremap <Space>Op O<C-r>+<Esc>
+nnoremap <Space>OP O<C-r>+<Esc>
 
 map <C-h> <C-w>h        " Easy window navigation
 map <C-j> <C-w>j
