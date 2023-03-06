@@ -32,11 +32,11 @@
 
 
 " Quickly get out of insert mode
-imap vv <Esc>
+imap kk <Esc>
 " Quickly get out of insert mode and write file
-imap ww <Esc>:w<CR>
+imap jj <Esc>:w<CR>
 " Quickly write file in normal mode
-nmap ^ <ESC>:w<CR>
+nmap <BS> <ESC>:w<CR>
 let mapleader = ','     " Choose a nicer leader-key
 " Use "ö"-key like ":"
 map ö :
