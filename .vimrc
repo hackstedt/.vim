@@ -318,10 +318,14 @@ endif
 noremap <F4> :NERDTreeToggle<CR>
 inoremap <F4> <Esc>:NERDTreeToggle<CR>
 
+" Open new tab + NERDTree
+:set <S-F4>=[1;2S
+noremap <S-F4> :tabe<CR>:NERDTree<CR>
+inoremap <S-F4> <Esc>:tabe<CR>:NERDTree<CR>
+
 " Find current file in NERDTREE
 noremap  <F3> :NERDTreeFind<CR>
 inoremap <F3> <Esc>:NERDTreeFind<CR>
-
 
 
        "-----------------------------------------------------------------------:
