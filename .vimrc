@@ -500,10 +500,10 @@ let g:pymode_folding = 0
 let g:pymode_lint_hold = 0
 
 
-" Powerline-fonts for the use with vim-airline
-Plugin 'Lokaltog/powerline-fonts'
-
 " lean & mean status/tabline for vim that's light as air
+" You'll may install fonts-powerline as well
+" https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation
+" sudo apt-get install fonts-powerline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
