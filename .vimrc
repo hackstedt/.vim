@@ -693,6 +693,14 @@ let g:gist_show_privates = 1
 let g:gist_post_private = 1
 
 
+" Free, ultrafast Copilot alternative for Vim and Neovim
+Plugin 'Exafunction/codeium.vim'
+let g:codeium_disable_bindings = 1
+imap <script><silent><nowait><expr> <C-l> codeium#Accept()
+imap <C-j>   <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <C-k>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+imap <C-n>   <Cmd>call codeium#Clear()<CR>
+
 "                                vim-color theme                               "
 " ---------------------------------------------------------------------------- "
 
